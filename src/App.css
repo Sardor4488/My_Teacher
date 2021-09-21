@@ -6,7 +6,33 @@
   height: 40vmin;
   pointer-events: none;
 }
+* {
+  box-sizing: border-box;
+}
 
+h1,
+h2,
+h3,
+h4,
+h5,p {
+  margin: 0 !important;
+  text-align: start;
+}
+a {
+  color: rgb(51, 51, 51) !important;
+}
+a,
+a:hover {
+  text-decoration: none !important;
+}
+ul,
+li {
+  margin: 0 !important;
+  list-style: none;
+}
+li {
+  display: inline-block;
+}
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;

@@ -1,0 +1,299 @@
+import React from "react";
+import { InputGroup, InputGroupAddon, InputGroupText, Input } from "reactstrap";
+import HeadPageWrapper from "./headPageWrapper";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  faSearch,
+  faTimes,
+  faUserFriends,
+} from "@fortawesome/free-solid-svg-icons";
+import howelessonTimeImg from "./ice_screenshot_20210921-091415.png";
+import teacherImg from "./teacher.png";
+import iconStudent from "../../icons/iconStudent.png";
+import coinIcon from "./../../icons/coins.png";
+import starIcon from "./../../icons/star.png";
+import { Link } from "react-router-dom";
+import causeimg1 from "./causeimg1.png";
+import causeimg2 from "./causeimg2.png";
+import causeimg3 from "./causeimg3.png";
+import causeimg4 from "./causeimg4.png";
+import sardor from "./Sardor.png";
+import Marjona from "./Marjona.png";
+import AzizaXojayeva from "./AzizaXojayeva.png";
+import eco from "./eco.png";
+import nur from "./nur.png";
+import ITPark from "./ITPark.png";
+import preper from "./Preper.png";
+import studyOne from "./StudyOne.png";
+import yoshlarAkademiyasi from "./Yoshlar-akademiyasi-50x48 1.png";
+const Teachers = [
+  {
+    img: teacherImg,
+    nameTech: "Abdujalol Xalimov",
+
+    hour: "44 000",
+    star: 4,
+    person: 16,
+    students: 55,
+    experience: "1 yil",
+    bridge: "C1",
+    certificate: "IELTS-6.5",
+    lenguages: "Rus tili,Ingliz tili",
+  },
+  {
+    img: teacherImg,
+    nameTech: "Abdujalol Xalimov",
+
+    hour: "44 000",
+    star: 4,
+    person: 16,
+    students: 55,
+    experience: "1 yil",
+    bridge: "C1",
+    certificate: "IELTS-6.5",
+    lenguages: "Rus tili,Ingliz tili",
+  },
+  {
+    img: teacherImg,
+    nameTech: "Abdujalol Xalimov",
+
+    hour: "44 000",
+    star: 4,
+    person: 16,
+    students: 55,
+    experience: "1 yil",
+    bridge: "C1",
+    certificate: "IELTS-6.5",
+    lenguages: "Rus tili,Ingliz tili",
+  },
+  {
+    img: teacherImg,
+    nameTech: "Abdujalol Xalimov",
+
+    hour: "44 000",
+    star: 4,
+    person: 16,
+    students: 55,
+    experience: "1 yil",
+    bridge: "C1",
+    certificate: "IELTS-6.5",
+    lenguages: "Rus tili,Ingliz tili",
+  },
+];
+const cause = [
+  {
+    img: causeimg1,
+    text: "O’quvchi o’qituvchi  bilan online jonli muloqot",
+  },
+  {
+    img: causeimg2,
+    text: "Eng qulay vaqtda hohlagan joyingizdan  o’qish imkoni",
+  },
+  {
+    img: causeimg3,
+    text: "Darajangizdan kelib  chiqib individual   yondashuvv",
+  },
+  {
+    img: causeimg4,
+    text: "Istalgan vaqtda  o’qituvchiga bog’lanib savol so’rang",
+  },
+];
+const comunuty = [
+  {
+    img: sardor,
+    nameTeacher: "Sardor Xudoyberdiyev",
+    task: "Loyiha asoschisi",
+    text: "Loyihaning boshqarilishi va  kelajagiga javobberadi. Mijozlarga maximum xizmat  ko'rsatilishini nazorat qiladi.",
+  },
+  {
+    img: AzizaXojayeva,
+    nameTeacher: "Nargiza Azizxo'jayeva",
+    task: "Bosh menejer",
+    text: "Xodimlarimiz va  o'qituvchilarimizning mijozlar  bilan ishlash sifatini tekshiradi.",
+  },
+  {
+    img: Marjona,
+    nameTeacher: "Marjona  Makhmudovna",
+    task: "Sifat nazorati Menejeri",
+    text: "Darslarning sifatli hamda  o'quvchilarimizning yuqori natijalarga erishishi uchun  javob beradi.",
+  },
+  {
+    img: sardor,
+    nameTeacher: "Sardor Xudoyberdiyev",
+    task: "Loyiha asoschisi",
+    text: "Loyihaning boshqarilishi va  kelajagiga javobberadi. Mijozlarga maximum xizmat  ko'rsatilishini nazorat qiladi.",
+  },
+];
+const confidence=[
+  {
+    img:eco,
+  },
+  {
+    img:ITPark,
+  },
+  {
+    img:studyOne,
+  },
+  {
+    img:nur,
+  },
+  {
+    img:preper,
+  },
+  {
+    img:yoshlarAkademiyasi,
+  },
+]
+const HeadPage = () => {
+  return (
+    <HeadPageWrapper>
+      <div className="headPage">
+        <div className="container headPageContainer">
+          <h4 className="py-3">Saralangan o‘qituvchilar online bazasi</h4>
+          <InputGroup>
+            <Input className="Input" placeholder="Izlash..." />
+            <InputGroupAddon addonType="prepend">
+              <InputGroupText className="p-3 input_headPage">
+                {" "}
+                <FontAwesomeIcon icon={faSearch} />{" "}
+              </InputGroupText>
+            </InputGroupAddon>
+          </InputGroup>
+        </div>
+        <div className="howelessonTime">
+          <div className="container">
+            <div className="row">
+              <div className="col-md-6 questionText">
+                <h2 className="py-3">Darslar qay tarzda o'tiladi?</h2>
+                <p className="questionTextp">
+                  Online va individual tarzda shaxsiy o‘qituvchi bilan, uyda,
+                  ishxonada, va umuman o‘zingizga qulay vaqtdava qulay joyda
+                  masofadan o‘rganing.
+                </p>
+              </div>
+              <div className="col-md-6 ps-0">
+                <img
+                  className="w-100 howelessonTimeImg"
+                  src={howelessonTimeImg}
+                  alt=""
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+        <div className="ourTeachersTop">
+          <div className="container">
+            <h1>Bizning TOP o'qituvchilarimiz</h1>
+            <p className="pb-2">
+              Hoziroq o'zingizga ma'qul ustozni tanlang va o'rganishni boshlang.
+              MyTeacher sizga.O'zbekistonning barchaburchagidan eng kuchli va
+              saralangan ustozlarni topadi va ushbu ro'yhatda ko'rsatadi.
+              DarTslar individual tarzdao'tiladi, har bir dars 1 soatdan davom
+              etadi.
+            </p>
+            <div className="row ">
+              {Teachers.map((value) => (
+                <div className="col-md-6 my-2  ">
+                  <div className="informationTecher">
+                    <div className="row d-flex align-items-center ">
+                      <div className="col-6 px-0">
+                        <img src={value.img} alt="" />
+                      </div>
+                      <div className="col-6 px-0">
+                        <h1> {value.nameTech}</h1>
+                        <p className="colorSucces ">
+                          <img className="pe-2" src={iconStudent} alt="" />
+                          <span>Matematika</span>
+                        </p>
+                        <p className="colorSucces ">
+                          <img className="pe-2" src={coinIcon} alt="" />{" "}
+                          <span className="colorPrimary h4 mb-0">
+                            {" "}
+                            {value.hour}
+                          </span>
+                          <span>/soat</span> <img src={starIcon} alt="" />{" "}
+                          <span className="colorPrimary h4 mb-0">
+                            {" "}
+                            {value.star}{" "}
+                          </span>
+                          <span className="colorGreen"> {value.person} </span>
+                          shaxs
+                        </p>
+                        <p className="colorSucces ">
+                          <FontAwesomeIcon icon={faUserFriends} />{" "}
+                          <span className="colorGreen">{value.students} </span>
+                          talaba{" "}
+                        </p>
+                        <p className="colorSucces ">
+                          Tajriba:{" "}
+                          <span className="colorGreen">
+                            {" "}
+                            {value.experience}
+                          </span>{" "}
+                          , Daraja:{" "}
+                          <span className="colorGreen"> {value.bridge}</span> ,
+                          Sertifikat:{" "}
+                          <span className="colorGreen">
+                            {" "}
+                            {value.certificate}
+                          </span>{" "}
+                          , Qaysi tillarni biladi:{" "}
+                          <span className="colorGreen">{value.lenguages}</span>{" "}
+                          .
+                        </p>
+                        <Link className="text-start ">
+                          <p className="colorGreen w-100 pt-3 text-start">Batafsil</p>
+                        </Link>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+        <div className="cause py-5">
+          <div className="container ">
+            <h1 className="pb-5">Nega aynan MyTeacher?</h1>
+
+            <div className="row ">
+              {cause.map((v) => (
+                <div className="col-md-3 ">
+                  <div className="bg-white py-4   shadowCauce">
+                    <img src={v.img} alt="" />
+                    <h4 className="text-center">{v.text}</h4>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+        <div className="comunuty py-5">
+          <div className="container">
+            <h1 className="pb-5">Bizning Professional Jamoa</h1>
+            <div className="row ">
+              {comunuty.map((v) => (
+                <div className="col-md-3 ">
+                  <div className="bg-white py-4   shadowComunity">
+                    <img className="imgTeachers" src={v.img} alt="" />
+                    <h4 className="text-center text-center py-1">
+                      {v.nameTeacher}
+                    </h4>
+                    <p className="fw-bold text-center py-2">{v.task}</p>
+                    <p className="text-center">{v.text}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
+            <h1 className="py-5">Bizga ishonishadi</h1>
+            <div className="row">
+             {confidence.map(v=> <div className="col-6 col-md-2"><img   src={v.img} alt="" /></div>)}
+            </div>
+          </div>
+        </div>
+      </div>
+    </HeadPageWrapper>
+  );
+};
+
+export default HeadPage;
