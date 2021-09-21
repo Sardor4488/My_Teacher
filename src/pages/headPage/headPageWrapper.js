@@ -2,14 +2,46 @@ import styled from "styled-components";
 import imgBg from "./HeadPage.png";
 const HeadPageWrapper = styled.div`
   .headPage {
-    background-image: url();
+    background-image: url("HeadPage.png") !important;
+    color:#fff;
+    padding-bottom:60px;
   }
   .headPageContainer {
     padding: 60px 100px;
   }
   Input {
-    overflow: hidden;
+    box-shadow:none !important;
     border: 0;
+    /* &:hover{
+        background: #10279E0D;
+        transition:0.4s;
+    } */
+  }
+  .category{
+      background-color:#fff;
+      border-radius:4px;
+      height: 80px;
+      padding: 25px !important;
+       align-items:center;
+       margin:5px;
+  }
+  .categorycomp{
+      background-color:#A30041;
+      color:#fff !important;
+      width:288px;
+      margin:auto;
+  }
+  .categoryBook{
+    width:288px;  
+        margin:auto;
+
+  }
+  .iconsirkul2{
+      position:absolute;
+  }
+  .iconsirkul2{
+      position:relative ;
+      left:-10px;
   }
   .input_headPage {
     background-color: #a30041;
@@ -35,8 +67,9 @@ const HeadPageWrapper = styled.div`
     background-color: #f5f5f7;
     border-radius: 8px;
     padding: 20px 0;
-    &::hover {
-      box-shadow: 0px 0px 30px 12px rgba(34, 60, 80, 0.07);
+    &:hover {
+        box-shadow: 0px 5px 10px 2px rgba(34, 60, 80, 0.2)!important;
+      transition: 0.5s;
     }
   }
 
@@ -55,8 +88,10 @@ const HeadPageWrapper = styled.div`
   .shadowCauce{
     box-shadow: 0px 0px 20px 2px rgba(34, 60, 80, 0.07);
     border-radius:4px;
-    &::hover{
-        background-color:#a30041;
+    &:hover{
+        background-color:#a30041 !important;
+        transition: 0.5s;
+        color:#ffff;
     }
    }
    .shadowComunity{
@@ -64,7 +99,11 @@ const HeadPageWrapper = styled.div`
        background-color:#F5F5f7 !important;
         min-height:450px !important;
         max-height:450px !important;
+        &:hover{
+            box-shadow: 0px 5px 5px -5px rgba(34, 60, 80, 0.6) !important;
+            transition: 0.3s;
 
+        }
    }
    .imgTeachers{
        border-radius:50%;

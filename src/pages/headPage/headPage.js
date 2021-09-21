@@ -26,7 +26,16 @@ import ITPark from "./ITPark.png";
 import preper from "./Preper.png";
 import studyOne from "./StudyOne.png";
 import yoshlarAkademiyasi from "./Yoshlar-akademiyasi-50x48 1.png";
-const Teachers = [
+import Slider from "react-slick";
+import iconLenguage from "./../../icons/iconLenguage.png"
+import iconsirkul from "./../../icons/iconSircul.png"
+import iconsirkul2 from "./../../icons/iconSirkulP.png"
+import menzurk1 from "./../../icons/menzurca1.png"
+import komputer from "./../../icons/compyuter.png"
+import book from "./../../icons/iconBook.png"
+// import "slick-carousel/slick/slick.css"; 
+// import "slick-carousel/slick/slick-theme.css";
+   const Teachers = [
   {
     img: teacherImg,
     nameTech: "Abdujalol Xalimov",
@@ -124,6 +133,7 @@ const comunuty = [
     text: "Loyihaning boshqarilishi va  kelajagiga javobberadi. Mijozlarga maximum xizmat  ko'rsatilishini nazorat qiladi.",
   },
 ];
+ 
 const confidence=[
   {
     img:eco,
@@ -145,11 +155,49 @@ const confidence=[
   },
 ]
 const HeadPage = () => {
+  const settings = {
+    dots: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    autoplay: true,
+    speed: 1000,
+     cssEase: "linear",
+     responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 3,
+          infinite: true,
+          dots: true
+        }
+      },
+      {
+        breakpoint: 600,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 2,
+          initialSlide: 2
+        }
+      },
+      {
+        breakpoint: 480,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1
+        }
+      }
+    ]
+  }
   return (
     <HeadPageWrapper>
-      <div className="headPage">
-        <div className="container headPageContainer">
-          <h4 className="py-3">Saralangan o‘qituvchilar online bazasi</h4>
+      <div>
+        <div  className="headPage">
+        <div className="container ">
+         <div className="headPageContainer">
+         <h4 className="py-3">Saralangan o‘qituvchilar online bazasi</h4>
           <InputGroup>
             <Input className="Input" placeholder="Izlash..." />
             <InputGroupAddon addonType="prepend">
@@ -159,6 +207,41 @@ const HeadPage = () => {
               </InputGroupText>
             </InputGroupAddon>
           </InputGroup>
+         </div>
+          <div className="row p-3">
+            <div className="col-md-4">
+              <div className="category d-flex">
+                <img src={iconLenguage} alt="" />
+                <div className="colorPrimary px-2"><h5 className="">Tillar</h5><p  >26 ta o‘qituvchi</p></div>
+              </div>
+            </div>
+            <div className="col-md-4">
+              <div className="category categorysirc d-flex">
+                <img src={iconsirkul} alt="" />
+                <img className="iconsirkul2" src={iconsirkul2} alt="" />
+                <div className="colorPrimary px-2 "><h5 className="">Aniq fanlar</h5><p  >26 ta o‘qituvchi</p></div>
+              </div>
+            </div>
+            <div className="col-md-4">
+              <div className="category d-flex">
+                <img src={menzurk1} alt="" />
+                 <div className="colorPrimary px-2"><h5 className="">Tabiy fanlar</h5><p  >26 ta o‘qituvchi</p></div>
+              </div>
+            </div>
+            <div className="col-md-6">
+              <div className="category w-75 categorycomp me-0 mt-4 d-flex">
+                <img src={komputer} alt="" />
+                 <div className="  px-2"><h5 className="">IT texnologiyalari</h5><p  >26 ta o‘qituvchi</p></div>
+              </div>
+            </div>
+            <div className="col-md-6">
+              <div className="category categoryBook ms-0 mt-4 w-75 d-flex">
+                <img src={book} alt="" />
+                 <div className="colorPrimary px-2"><h5 className="">IT texnologiyalari</h5><p  >26 ta o‘qituvchi</p></div>
+              </div>
+            </div>
+          </div>
+        </div>
         </div>
         <div className="howelessonTime">
           <div className="container">
@@ -250,12 +333,25 @@ const HeadPage = () => {
                 </div>
               ))}
             </div>
+            {/* <Slider {...settings}>
+         {mapRoom.map(v=> <div className="p-3">
+            <div>
+            <img className="w-100 h-100" src= {v.img} alt="" />
+            </div>
+          </div>)}
+         </Slider> */}
+
+         <div>
+           <div>
+             <div></div>
+           </div>
+         </div>
           </div>
         </div>
         <div className="cause py-5">
           <div className="container ">
             <h1 className="pb-5">Nega aynan MyTeacher?</h1>
-
+            
             <div className="row ">
               {cause.map((v) => (
                 <div className="col-md-3 ">
