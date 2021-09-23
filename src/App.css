@@ -14,9 +14,12 @@ h1,
 h2,
 h3,
 h4,
-h5,p {
+h5,
+a,
+p {
   margin: 0 !important;
   text-align: start;
+  font-family: "Inter", sans-serif;
 }
 a {
   color: rgb(51, 51, 51) !important;

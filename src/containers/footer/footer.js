@@ -31,11 +31,11 @@ const Footer = () => {
             </div>
             <div className="col-md-3">
               <h4 className="pb-3">Menyu</h4>
-              <Link className="footerLinks">Asosiy</Link>
-              <Link className="footerLinks">Biz haqimizda</Link>
-              <Link className="footerLinks">Blog</Link>
-              <Link className="footerLinks">Fikrlar</Link>
-              <Link className="footerLinks">Jamoa</Link>
+              <Link to="/" className="footerLinks">Asosiy</Link>
+              <Link to="/about" className="footerLinks">Biz haqimizda</Link>
+              <Link to= "/blog" className="footerLinks">Blog</Link>
+              <Link to= "/comment" className="footerLinks">Fikrlar</Link>
+              <Link to= "" className="footerLinks">Jamoa</Link>
             </div>
             <div className="col-md-3">
               <h4 className="pb-3">Eng so'nggi yangiliklar</h4>
@@ -79,6 +79,12 @@ const Footer = () => {
                 <Link><span className="p-2"><FontAwesomeIcon icon={faYoutube}/></span></Link>
                </p>
             </div>
+          </div>
+
+        </div>
+        <div className="edn mt-5 py-2">
+          <div className="container">
+            <p className="fw-bold">MyTeacher© 2021 Barcha xizmatlar litsenziyalangan</p>
           </div>
         </div>
       </div>

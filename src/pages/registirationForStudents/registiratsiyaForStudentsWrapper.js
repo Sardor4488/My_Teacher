@@ -1,11 +1,9 @@
 import styled from "styled-components";
-const RegisterationWrapper = styled.div`
-.registeration{
-    .textRegistiration{
-        background-color: #F5F5F7;
-        text-align:center;
-    }
-    .register{
+const RegistirationForStudentsWrapper = styled.div`
+.register-for-studen{
+    background-color:#E1E1E1;
+}
+.register{
       background-color:#A30041;
       color:#fff;
       &:hover{
@@ -19,13 +17,11 @@ const RegisterationWrapper = styled.div`
 
     }
   }
+  .form-group{
+      text-align:start !important;
+  }
   .colorPrimary{
     color:#A30050 !important;
   }
-  .cardRegister{
-      border:1px solid  #e1e1e1;
-        border-radius:8px;
-  }
- }
 `
-export default RegisterationWrapper;
+export default RegistirationForStudentsWrapper;

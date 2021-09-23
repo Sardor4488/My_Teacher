@@ -8,6 +8,10 @@ import About from "./pages/about";
 import Commentarie from "./pages/comment";
 import Registeration from "./pages/registeration";
 import Footer from "./containers/footer";
+import Thought from "./pages/thought";
+import BlogInformation from "./pages/blogInformation/blogInformation";
+import GroupTeachrs from "./pages/groupTeachrs/groupTeachrs";
+import RegistirationForStudents  from "./pages/registirationForStudents/registiratsiyaForStudents";
 const pages = [
   {
     path: "/",
@@ -34,11 +38,31 @@ const pages = [
     component: <Registeration />,
     exact: false,
   },
+  {
+    path: "/thought",
+    component: < Thought />,
+    exact: false,
+  },
+  {
+    path: "/blogInformation",
+    component: < BlogInformation />,
+    exact: false,
+  },
+  {
+    path: "/groupTeachrs",
+    component: < GroupTeachrs />,
+    exact: false,
+  },
+  {
+    path: "/registiratsiyaForStudents",
+    component: < RegistirationForStudents />,
+    exact: false,
+  },
 ];
 function App() {
   return (
     <div className="App">
-      <Header />
+      <Header   />
       <Switch>
         {pages.map((v, i) => {
           return (
@@ -54,3 +78,4 @@ function App() {
 }
 
 export default App;
+ 

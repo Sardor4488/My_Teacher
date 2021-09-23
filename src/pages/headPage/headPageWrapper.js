@@ -1,11 +1,39 @@
 import styled from "styled-components";
-import imgBg from "./HeadPage.png";
-const HeadPageWrapper = styled.div`
+ const HeadPageWrapper = styled.div`
   .headPage {
     background-image: url("HeadPage.png") !important;
     color:#fff;
     padding-bottom:60px;
+    background-repeat:no-repeat;
+    background-size:cover
   }
+ 
+  @media screen and (max-width:975px){
+    .questionTextp {
+    font-size: 12px !important;
+  }
+  }
+  @media screen and (max-width:751px){
+     .headPageContainer {
+    padding: 20px  !important;
+   } 
+   .categorycomp{
+     width:100% !important;
+    }
+    .categoryBook{
+    width:100% !important;  
+   }
+   .questionText {
+     border-radius: 8px 8px 0px 0px !important;
+   }
+   .md-none-padding{
+         padding-right:0px !important;
+
+   }
+  .howelessonTimeImg {
+    border-radius: 0px 0px 8px 8px !important;
+  }
+}
   .headPageContainer {
     padding: 60px 100px;
   }
@@ -44,7 +72,7 @@ const HeadPageWrapper = styled.div`
       left:-10px;
   }
   .input_headPage {
-    background-color: #a30041;
+    background-color: #a30041 !important;
     color: #fff;
   }
   .howelessonTime {
@@ -56,7 +84,7 @@ const HeadPageWrapper = styled.div`
     border-radius: 8px 0px 0px 8px;
     padding: 40px 10px;
     text-align: start;
-  }
+   }
   .questionTextp {
     font-size: 24px;
   }

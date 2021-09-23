@@ -191,19 +191,20 @@ const HeadPage = () => {
       }
     ]
   }
+  
   return (
     <HeadPageWrapper>
       <div>
         <div  className="headPage">
         <div className="container ">
          <div className="headPageContainer">
-         <h4 className="py-3">Saralangan o‘qituvchilar online bazasi</h4>
+         <h4 className="py-3 ">Saralangan o‘qituvchilar online bazasi</h4>
           <InputGroup>
             <Input className="Input" placeholder="Izlash..." />
             <InputGroupAddon addonType="prepend">
               <InputGroupText className="p-3 input_headPage">
                 {" "}
-                <FontAwesomeIcon icon={faSearch} />{" "}
+                <Link to="/groupTeachrs" className="text-white"><FontAwesomeIcon icon={faSearch} />{" "}</Link>
               </InputGroupText>
             </InputGroupAddon>
           </InputGroup>
@@ -235,7 +236,7 @@ const HeadPage = () => {
               </div>
             </div>
             <div className="col-md-6">
-              <div className="category categoryBook ms-0 mt-4 w-75 d-flex">
+              <div className="category categoryBook  ms-0 mt-4 w-75 d-flex">
                 <img src={book} alt="" />
                  <div className="colorPrimary px-2"><h5 className="">IT texnologiyalari</h5><p  >26 ta o‘qituvchi</p></div>
               </div>
@@ -254,7 +255,7 @@ const HeadPage = () => {
                   masofadan o‘rganing.
                 </p>
               </div>
-              <div className="col-md-6 ps-0">
+              <div className="col-md-6 md-none-padding ps-0">
                 <img
                   className="w-100 howelessonTimeImg"
                   src={howelessonTimeImg}
@@ -279,10 +280,10 @@ const HeadPage = () => {
                 <div className="col-md-6 my-2  ">
                   <div className="informationTecher">
                     <div className="row d-flex align-items-center ">
-                      <div className="col-6 px-0">
+                      <div className="col-md-6 w-md-100 px-0">
                         <img src={value.img} alt="" />
                       </div>
-                      <div className="col-6 px-0">
+                      <div className="col-md-6 ">
                         <h1> {value.nameTech}</h1>
                         <p className="colorSucces ">
                           <img className="pe-2" src={iconStudent} alt="" />
@@ -354,7 +355,7 @@ const HeadPage = () => {
             
             <div className="row ">
               {cause.map((v) => (
-                <div className="col-md-3 ">
+                <div className="col-md-3 mt-1">
                   <div className="bg-white py-4   shadowCauce">
                     <img src={v.img} alt="" />
                     <h4 className="text-center">{v.text}</h4>
@@ -369,7 +370,7 @@ const HeadPage = () => {
             <h1 className="pb-5">Bizning Professional Jamoa</h1>
             <div className="row ">
               {comunuty.map((v) => (
-                <div className="col-md-3 ">
+                <div className="col-md-3 mt-1">
                   <div className="bg-white py-4   shadowComunity">
                     <img className="imgTeachers" src={v.img} alt="" />
                     <h4 className="text-center text-center py-1">
