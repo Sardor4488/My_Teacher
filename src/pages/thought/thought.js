@@ -1,13 +1,32 @@
 import { faCamera } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { TextareaAutosize } from "@material-ui/core";
-import React from "react";
+import React, { useRef, useState } from "react";
 import Button from "@material-ui/core/Button";
 import { Link, NavLink, useParams } from "react-router-dom";
 import { Col, FormGroup, Input, Label, Row } from "reactstrap";
 import ThoughtWrapper from "./thoughtWrapper";
 import iconCamera from "./../../icons/2561351_camera_icon.png";
 const Thought = () => {
+  const [imgvalue, setImgvalue] = useState("");
+  var preview = useRef(null);
+  function previewFile(event) {
+    console.log(event.target);
+    var file = event.target.files[0];
+    var reader = new FileReader();
+
+    reader.onloadend = function () {
+      preview.current.src = reader.result;
+    };
+
+    if (file) {
+      reader.readAsDataURL(file);
+    } else {
+      preview.current.src = "";
+    }
+  }
+
+  console.log(imgvalue);
   return (
     <ThoughtWrapper>
       <div className="thought">
@@ -44,11 +63,22 @@ const Thought = () => {
             </div>
             <div className="row py-4">
               <div className="col-md-2 py-3 pt-5 px-0">
-                <div className="putImg">
-                  <div className="iconCameraDiv">
-                    <img className="iconCamera" src={iconCamera} alt="" />
-                  </div>
-                </div>{" "}
+                <label htmlFor="img" className="putImg">
+                  <input
+                    accept=".jpg, .jpeg, .png"
+                    multiple
+                    type="file"
+                    id="img"
+                    onChange={(event) => previewFile(event)}
+                    className="visually-hidden"
+                  />
+                  <img
+                    className="iconCamera"
+                    ref={preview}
+                    src={imgvalue[0]}
+                    alt=""
+                  />
+                </label>
               </div>
               <div className="col-md-10 ">
                 <p className="py-2">WebClass haqida fikringiz</p>{" "}

@@ -4,29 +4,32 @@ const HeaderWrapper = styled.div`
     background-color: #f5f5f7;
     width: 100%;
     padding: 10px;
-    box-shadow: 0px 5px 5px -5px #000 !important;  }
-  z-index:1000 !important;
-  .register{
-      background-color:#A30041;
-      color:#fff;
-      &:hover{
-        background-color:#fff;
-        color:#A30041 !important;
-       }
-  }.registertext{
-    color:#fff !important;
-    &:hover{
-      color:#A30041 !important;
+    position: fixed;
+    top: 0px;
+    z-index: 1000 !important;
+    box-shadow: 0px 5px 5px -5px #000 !important;
+  }
 
+  .register {
+    background-color: #a30041;
+    color: #fff;
+    &:hover {
+      background-color: #fff;
+      color: #a30041 !important;
     }
   }
-  .colorPrimary{
-    color:#A30050 !important;
+  .registertext {
+    color: #fff !important;
+    &:hover {
+      color: #a30041 !important;
+    }
   }
-  .kirishText:hover{
-    color:#fff !important;
+  .colorPrimary {
+    color: #a30050 !important;
   }
-  
+  .kirishText:hover {
+    color: #fff !important;
+  }
 
   // yo tog'rilang yo indamay tutring okokokokokokok
 
@@ -36,6 +39,7 @@ const HeaderWrapper = styled.div`
     justify-content: space-between;
   }
   .logo {
+    width: 170px;
   }
   .linksHeader {
     margin: 10px;
@@ -48,50 +52,76 @@ const HeaderWrapper = styled.div`
     &::hover {
     }
   }
-  .kirish{
-      color: #a30041;
-      border:1px solid #a30041 !important;
-      &:hover{
-        color: #fff;
-      background-color:#A30041;
-
-       }
+  .kirish {
+    color: #a30041;
+    border: 1px solid #a30041 !important;
+    &:hover {
+      color: #fff;
+      background-color: #a30041;
+    }
   }
   .active {
     border-top: 4px #a30041 solid;
     color: #a30041 !important;
     transition: 0.1s;
-    border-radius:4px;
+    border-radius: 4px;
   }
-  .textPrimary{
+  .textPrimary {
     color: #a30041 !important;
-    font-size:25px;
-   cursor: pointer;
-  
+    font-size: 25px;
+    cursor: pointer;
   }
-  @media screen and (max-width:978px){
-    .md_hide{
-      display:none !important ;
-    } 
-     .logo {
-       width:120px
-  }.md_show{
-      display:flex !important;
+  .faTimes{
+    position:absolute;
+    top:10px;
+    right:50px;
+    color: #a30041 !important;
+
+  }
+  @media screen and (max-width: 978px) {
+    .md_hide {
+      display: none !important ;
+    }
+    .logo {
+      width: 120px;
+    }
+    .md_show {
+      display: flex !important;
     }
   }
   .nav__start {
-  right: 0;
-  transition: 0.5s;
-}
-.nav__menu {
-  position: fixed;
-  right: -100%;
-  top: 78px;
-  width: 20%;
-  height: 100vh;
-  background-color: white;
-  transition: 0.5s;
-  box-shadow: rgb(0 0 0 / 13%) -10px 80px 20px 0px;
-}
+    top: 0;
+    transition: 0.5s;
+  }
+
+  .nav__menu {
+    position: fixed;
+    top: 0px !important;
+    left:0;
+    width:  100% !important;
+    /* height:400px !important; */
+    background-color: white;
+    transition: 0.5s;
+    box-shadow: rgb(0 0 0 / 13%) -10px 20px 20px 0px;
+  }
+  .w-100Sm{
+    display:block;
+    text-align:center;
+  }
+  .activeSm{
+    color: #a30041 !important;
+  }
+  @media screen and (max-width: 768px) {
+    .btnHeader {
+      display: none !important;
+    }
+
+    .btnBar {
+      display: block !important   ;
+    }
+    .header_menumdhide {
+      display: none !important;
+    }
+  }
 `;
 export default HeaderWrapper;

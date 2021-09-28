@@ -16,16 +16,16 @@ import { Fade, Typography } from "@material-ui/core";
 // import Fade from '@mui/material/Fade';
 //  import Typography from '@mui/material/Typography';
 const style = {
-  position: 'absolute',
-  top: '50%',
-  left: '50%',
-  transform: 'translate(-50%, -50%)',
+  position: "absolute",
+  top: "50%",
+  left: "50%",
+  transform: "translate(-50%, -50%)",
   width: 400,
-  bgcolor: 'background.paper',
-  border: '2px solid #000',
+  bgcolor: "background.paper",
+  border: "2px solid #000",
   boxShadow: 24,
   p: 4,
-};  
+};
 const headerMap = [
   {
     title: "Asosiy",
@@ -50,7 +50,6 @@ const headerMap = [
 ];
 
 export default class Header extends Component {
-  
   state = { a: false };
   showNav = () => {
     this.setState((state) => {
@@ -63,15 +62,18 @@ export default class Header extends Component {
       <HeaderWrapper>
         <div className="header    ">
           <div className="container headerContainer">
-            <img src={logo} className="logo" alt="" />
+            <Link to="/">
+              <img src={logo} className="logo" alt="" />
+            </Link>
             <ul className="d-flex align-items-center">
               {headerMap.map((v, i) => {
                 return (
                   <li
                     className={`md_hide    ${
-                      (this.state.a && "nav_start") || ""  }`}  key={i}
+                      (this.state.a && "nav_start") || ""
+                    }`}
+                    key={i}
                   >
-                     
                     <NavLink
                       exact={v.exact}
                       className="linksHeader me-2"
@@ -84,28 +86,33 @@ export default class Header extends Component {
                 );
               })}
               <li>
-                  <Button className="register"     variant="contained">
                 <Link className=" registertext " to="/registeration">
+                  <Button className="register" variant="contained">
                     Registratsiya
-                </Link>
                   </Button>
+                </Link>
               </li>
               <li>
-                  <Button   className="mx-2 kirish" variant="outlined">
-                <Link className=" colorPrimary kirishText" activeClassName="disActive" to="">
+                <Link
+                  to="/logIn"
+                  className=" colorPrimary kirishText"
+                  activeClassName="disActive"
+                >
+                  <Button className="mx-2 kirish" variant="outlined">
                     Kirish
-                </Link>
                   </Button>
+                </Link>
               </li>
-              <li className="textPrimary md_show d-none">
+              <li className="textPrimary  md_show d-none">
                 <FontAwesomeIcon
                   onClick={this.showNav}
                   className="ms-3"
                   icon={this.state.a ? faTimes : faBars}
                 />
               </li>
-             </ul>
+            </ul>
           </div>
+
           {/* <Modal
         aria-labelledby="transition-modal-title"
         aria-describedby="transition-modal-description"
@@ -117,17 +124,73 @@ export default class Header extends Component {
           timeout: 500,
         }}
       >
-        <Fade in={open}>
-          <Box sx={style}>
-            <Typography id="transition-modal-title" variant="h6" component="h2">
-              Text in a modal
-            </Typography>
-            <Typography id="transition-modal-description" sx={{ mt: 2 }}>
-              Duis mollis, est non commodo luctus, nisi erat porttitor ligula.
-            </Typography>
-          </Box>
-        </Fade>
+        // <Fade in={open}>
+        //   <Box sx={style}>
+        //     <Typography id="transition-modal-title" variant="h6" component="h2">
+        //       Text in a modal
+        //     </Typography>
+        //     <Typography id="transition-modal-description" sx={{ mt: 2 }}>
+        //       Duis mollis, est non commodo luctus, nisi erat porttitor ligula.
+        //     </Typography>
+        //   </Box>
+        // </Fade>
       </Modal> */}
+          <div className="w-100">
+            {headerMap.map((v, i) => {
+              return (
+                <ul className="d-none ">
+                  <li className={` nav__menu  py-4  `} key={i}>
+                    <p className="faTimes">
+                      <FontAwesomeIcon icon={faTimes} />
+                    </p>
+                    <NavLink
+                      exact
+                      className="  w-100Sm "
+                      activeClassName="activeSm"
+                      to=""
+                    >
+                      Asosiy
+                    </NavLink>
+                    <NavLink
+                      exact
+                      className="w-100Sm  w-100 "
+                      activeClassName="activeSm"
+                      to="/about"
+                    >
+                      Biz haqimizda
+                    </NavLink>
+                    <NavLink
+                      exact
+                      className=" w-100Sm  "
+                      activeClassName="activeSm"
+                      to="/blob"
+                    >
+                      Blog
+                    </NavLink>{" "}
+                    <NavLink
+                      exact
+                      className="   "
+                      activeClassName="activeSm"
+                      to="/comment"
+                    >
+                      Fikirlar
+                    </NavLink>
+                   <div className="w-100 mt-2">
+                   <NavLink
+                      to="/logIn"
+                      className=" colorPrimary kirishText"
+                      activeClassName="disActive"
+                    >
+                      <Button className="mx-2 kirish" variant="outlined">
+                        Kirish
+                      </Button>
+                    </NavLink>
+                   </div>
+                  </li>
+                </ul>
+              );
+            })}
+          </div>
         </div>
       </HeaderWrapper>
     );

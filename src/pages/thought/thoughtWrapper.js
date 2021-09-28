@@ -24,7 +24,8 @@ const ThoughtWrapper = styled.div`
 
 }
 .iconCamera{
-     width:40px !important;
+     width: 100% !important;
+     height: 100% ;
 
 }
 .putImg{
@@ -33,6 +34,7 @@ const ThoughtWrapper = styled.div`
     display:flex;
     justify-content:center;
     align-items:center;
+    background-image:url("2561351_camera_icon.png") !important;
 }
 .colorPrimary{
     color: #a30041 !important;

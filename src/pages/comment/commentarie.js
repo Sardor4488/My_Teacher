@@ -44,7 +44,7 @@ const Commentarie = () => {
         </div>
         <div className="comments">
           <div className="container">
-            <div className="row">
+            <div className="row container">
              {Comments.map((v) => (
               <div className="col-12 mt-3 bg-white p-5 shadow">
                 <div className="d-flex align-items-center">

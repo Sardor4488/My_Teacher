@@ -7,16 +7,21 @@ import styled from "styled-components";
     background-repeat:no-repeat;
     background-size:cover
   }
- 
+ .abv{
+   width:260px !important;
+ }
   @media screen and (max-width:975px){
     .questionTextp {
-    font-size: 12px !important;
+    font-size: 14px !important;
   }
   }
+  
   @media screen and (max-width:751px){
      .headPageContainer {
     padding: 20px  !important;
    } 
+   .startPadding{
+ padding:0 10px  }
    .categorycomp{
      width:100% !important;
     }

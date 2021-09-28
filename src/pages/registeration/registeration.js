@@ -18,27 +18,27 @@ const Registeration = () => {
         </div>
         <div className="container">
           <div className="row my-5">
-          <div className="col-md-6 ">
+          <div className="col-md-6 my-2">
              <div className="py-5 cardRegister">
              <img className="" src={forTeacher} alt="" />
              <div className="w-100 p-4">
-             <Button className="register" variant="contained">
                 <Link  className=" registertext " to="/registiratsiyaForStudents">
+             <Button className="register" variant="contained">
                   Registratsiya
-                </Link>
               </Button>
+                </Link>
              </div>
              </div>
             </div>
-            <div className="col-md-6  ">
+            <div className="col-md-6 my-2 ">
             <div className="py-5 cardRegister">
              <img className="" src={forStudent} alt="" />
              <div className="w-100 p-4">
-             <Button className="register" variant="contained">
                 <Link className=" registertext " to="/registeration">
+             <Button className="register" variant="contained">
                   Registratsiya
-                </Link>
               </Button>
+                </Link>
              </div>
              </div>
             </div>

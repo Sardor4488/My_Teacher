@@ -38,7 +38,7 @@ const Blog = () => {
           <div className="container py-5">
             <div className="row">
               {blog.map((v) => (
-                <div className="col-md-4 ps-0 ">
+                <div className="col-md-4 ps-0 my-2">
                   <div className=" informationCard pb-4">
                     <img src={v.img} className="informationImg" alt="" />
                     <div className="p-3 text-center pb-4">

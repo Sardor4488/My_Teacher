@@ -12,6 +12,7 @@ import Thought from "./pages/thought";
 import BlogInformation from "./pages/blogInformation/blogInformation";
 import GroupTeachrs from "./pages/groupTeachrs/groupTeachrs";
 import RegistirationForStudents  from "./pages/registirationForStudents/registiratsiyaForStudents";
+import LogIn from "./pages/logIn";
 const pages = [
   {
     path: "/",
@@ -58,12 +59,18 @@ const pages = [
     component: < RegistirationForStudents />,
     exact: false,
   },
+  {
+    path: "/logIn",
+    component: < LogIn />,
+    exact: false,
+  },
 ];
 function App() {
   return (
     <div className="App">
       <Header   />
-      <Switch>
+     <div className="mt-5">
+     <Switch>
         {pages.map((v, i) => {
           return (
             <Route path={v.path} key={i} exact={v.exact}>
@@ -72,6 +79,7 @@ function App() {
           );
         })}
       </Switch>
+     </div>
       <Footer/>
     </div>
   );
