@@ -39,7 +39,7 @@ const HeaderWrapper = styled.div`
     justify-content: space-between;
   }
   .logo {
-    width: 170px;
+    width: 160px;
   }
   .linksHeader {
     margin: 10px;

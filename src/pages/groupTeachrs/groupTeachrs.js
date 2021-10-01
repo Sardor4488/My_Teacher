@@ -91,12 +91,11 @@ function GroupTeachrs() {
             <InputGroup>
               <Input className="Input" placeholder="Izlash..." />
               <InputGroupAddon addonType="prepend">
-                <InputGroupText className="p-3 input_headPage">
-                  {" "}
-                  <Link to="/groupTeachrs" className="text-white">
+                <Link to="/groupTeachrs" className="text-white">
+                  <InputGroupText className="p-3 input_headPage">
                     <FontAwesomeIcon icon={faSearch} />{" "}
-                  </Link>
-                </InputGroupText>
+                  </InputGroupText>
+                </Link>
               </InputGroupAddon>
             </InputGroup>
             <div className="ps-2 pb-0 d-flex row container m-0 justify-content-center  text-center">
@@ -136,17 +135,17 @@ function GroupTeachrs() {
                   </div>
                 </FormGroup>
               </div>
-             <div className="col-md-4 p-lg-5 d-flex align-content-center justify-content-center">
-             <Link Link
-                
-                className=" justify-content-center colorPrimary kirishText"
-                activeClassName="disActive"
-              >
-                <Button className="mx-2 kirish" variant="outlined">
-                  Qidirish
-                </Button>
-              </Link>
-             </div>
+              <div className="col-md-4 p-lg-5 d-flex align-content-center justify-content-center">
+                <Link
+                  Link
+                  className=" justify-content-center colorPrimary kirishText"
+                  activeClassName="disActive"
+                >
+                  <Button className="mx-2 kirish" variant="outlined">
+                    Qidirish
+                  </Button>
+                </Link>
+              </div>
             </div>
           </div>
         </div>

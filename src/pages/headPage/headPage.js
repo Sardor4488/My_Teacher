@@ -195,9 +195,9 @@ const HeadPage = () => {
   };
 
   // SEACH COURSE FUNCTION!!!!!!!!!!11
-function searchCours(event) {
-  console.log(event.target.value);
-}
+  function searchCours(event) {
+    console.log(event.target.value);
+  }
   return (
     <HeadPageWrapper>
       <div>
@@ -206,14 +206,17 @@ function searchCours(event) {
             <div className="headPageContainer">
               <h4 className="py-3 ">Saralangan o‘qituvchilar online bazasi</h4>
               <InputGroup>
-                <Input className="Input" onChange={searchCours} placeholder="Izlash..." />
+                <Input
+                  className="Input"
+                  onChange={searchCours}
+                  placeholder="Izlash..."
+                />
                 <InputGroupAddon addonType="prepend">
-                  <InputGroupText className="p-3 input_headPage">
-                    {" "}
-                    <Link to="/groupTeachrs" className="text-white">
+                  <Link to="/groupTeachrs" className="text-white">
+                    <InputGroupText className="p-3 input_headPage">
                       <FontAwesomeIcon icon={faSearch} />{" "}
-                    </Link>
-                  </InputGroupText>
+                    </InputGroupText>
+                  </Link>
                 </InputGroupAddon>
               </InputGroup>
             </div>
