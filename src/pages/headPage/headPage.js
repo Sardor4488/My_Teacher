@@ -316,10 +316,10 @@ const HeadPage = () => {
                 <div className="col-md-6 my-2  ">
                   <div className="informationTecher">
                     <div className="row d-flex ps-4 align-items-center ">
-                      <div className="col-md-6 abv w-md-100 px-0">
+                      <div className="col-md-5   w-md-100 px-0">
                         <img src={value.img} alt="" />
                       </div>
-                      <div className="col-md-6 ps-0 startPadding">
+                      <div className="col-md-7 ps-0 startPadding">
                         <h3> {value.nameTech}</h3>
                         <p className="colorSucces ">
                           <img className="pe-2" src={iconStudent} alt="" />
