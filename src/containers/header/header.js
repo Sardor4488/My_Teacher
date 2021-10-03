@@ -95,7 +95,7 @@ export default class Header extends Component {
               <li>
                 <Link
                   to="/logIn"
-                  className=" colorPrimary kirishText"
+                  className=" colorPrimary dmdnone kirishText"
                   activeClassName="disActive"
                 >
                   <Button className="mx-2 kirish" variant="outlined">

@@ -82,6 +82,9 @@ const HeaderWrapper = styled.div`
     .md_hide {
       display: none !important ;
     }
+    .dmdnone{
+      display:none ;
+    }
     .logo {
       width: 120px;
     }
