@@ -73,9 +73,13 @@ const HeaderWrapper = styled.div`
   }
   .faTimes{
     position:absolute;
-    top:10px;
-    right:50px;
+    top:20px;
+    right:20px;
     color: #a30041 !important;
+
+  }
+  .transition{
+    transition: top 0.5s;
 
   }
   @media screen and (max-width: 978px) {
@@ -90,11 +94,12 @@ const HeaderWrapper = styled.div`
     }
     .md_show {
       display: flex !important;
+    transition: top 0.5s;
+
     }
   }
-  .nav__start {
-    top: 0;
-    transition: 0.5s;
+ .d-flex{
+  transition: top 0.5s;
   }
 
   .nav__menu {
@@ -104,7 +109,7 @@ const HeaderWrapper = styled.div`
     width:  100% !important;
     /* height:400px !important; */
     background-color: white;
-    transition: 0.5s;
+    transition: top 0.5s;
     box-shadow: rgb(0 0 0 / 13%) -10px 20px 20px 0px;
   }
   .w-100Sm{

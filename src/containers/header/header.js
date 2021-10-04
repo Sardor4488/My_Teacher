@@ -50,7 +50,7 @@ const headerMap = [
 ];
 
 export default class Header extends Component {
-  state = { a: false };
+  state = { a: true };
   showNav = () => {
     this.setState((state) => {
       return { a: !state.a };
@@ -69,9 +69,7 @@ export default class Header extends Component {
               {headerMap.map((v, i) => {
                 return (
                   <li
-                    className={`md_hide    ${
-                      (this.state.a && "nav_start") || ""
-                    }`}
+                    className={`md_hide    `}
                     key={i}
                   >
                     <NavLink
@@ -107,9 +105,9 @@ export default class Header extends Component {
                 <FontAwesomeIcon
                   onClick={this.showNav}
                   className="ms-3"
-                  icon={this.state.a ? faTimes : faBars}
+                  icon={this.state.a ? faBars :faTimes }
                 />
-              </li>
+               </li>
             </ul>
           </div>
 
@@ -136,13 +134,12 @@ export default class Header extends Component {
         // </Fade>
       </Modal> */}
           <div className="w-100">
-            {headerMap.map((v, i) => {
-              return (
-                <ul className="d-none ">
-                  <li className={` nav__menu  py-4  `} key={i}>
-                    <p className="faTimes">
-                      <FontAwesomeIcon icon={faTimes} />
-                    </p>
+            
+                <div className={` transition  ${  (this.state.a && "d-none ") || " "  } `}>
+                  <div className="  nav__menu py-4 pt-5 "   >
+                   
+                      <FontAwesomeIcon  onClick={this.showNav} className="faTimes h5" icon={faTimes} /> 
+                    
                     <NavLink
                       exact
                       className="  w-100Sm "
@@ -186,10 +183,9 @@ export default class Header extends Component {
                       </Button>
                     </NavLink>
                    </div>
-                  </li>
-                </ul>
-              );
-            })}
+                  </div>
+                </div>
+              
           </div>
         </div>
       </HeaderWrapper>
