@@ -21,14 +21,14 @@ const ThoughtWrapper = styled.div`
     padding: 10px;
     border-radius: 50%;
   }
-  .iconCamera {
+  .iconCamera ,  .visually-hidden {
     
     max-width: 184px;
     min-width: 184px;
     max-height: 210px;
     min-height: 200px;
-    
-}
+ }
+ 
   .putImg {
     border: 1px dashed rgba(0, 0, 0, 0.3);
     height: 100%;

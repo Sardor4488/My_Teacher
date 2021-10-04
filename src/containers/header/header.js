@@ -160,7 +160,7 @@ export default class Header extends Component {
                       exact
                       className=" w-100Sm  "
                       activeClassName="activeSm"
-                      to="/blob"
+                      to="/blog"
                     >
                       Blog
                     </NavLink>{" "}
